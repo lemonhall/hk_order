@@ -1,0 +1,19 @@
+{
+  "name": "sf-hk-order",
+  "version": "0.0.1",
+  "description": "sf express",
+  "dependencies": {
+    "kafka-node": "^0.2.12",
+    "thrift": "^0.9.2",
+    "underscore": "^1.7.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git"
+  },
+  "readmeFilename": "Readme.md",
+  "bugs": {
+    "url": "https://github.com/visionmedia/co/issues"
+  },
+  "homepage": "https://github.com/visionmedia/co"
+}
