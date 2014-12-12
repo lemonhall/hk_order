@@ -8,13 +8,16 @@ var producer 		  = new HighLevelProducer(kclient);
 
 producer.on('ready', function () {
     setInterval(function(){
-    	producer.send( [ { topic:'test', messages : "fly me to the moon" } ], function (err, data) {
-	   	if(!err){
+
+var order = {omsid:1111,buyer:1,products:[{sku:1,seller:1,price:3,amount:5},{sku:2,seller:1,price:2,amount:5},{sku:3,seller:2,price:2,amount:5},{sku:4,seller:2,price:2,amount:5},{sku:5,seller:2,price:2,amount:5},{sku:6,seller:3,price:2,amount:5}]};
+
+    	producer.send( [ { topic:'test', messages : JSON.stringify(order) } ], function (err, data) {
+	   		if(!err){
         		console.log(data);
-		}else{
-			console.log(err);
-		}
-	
-    	});
-    },10);
+			}else{
+				console.log(err);
+			}
+    	});//producer.send....end....
+
+    },100);//END OF set Interval
 });
